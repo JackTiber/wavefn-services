@@ -1,0 +1,55 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: minio-pv-volume-0
+  labels:
+    type: local
+spec:
+  capacity:
+    storage: 50Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: /export/data
+---
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: minio-pv-volume-1
+  labels:
+    type: local
+spec:
+  capacity:
+    storage: 50Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: /export/data
+---
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: minio-pv-volume-2
+  labels:
+    type: local
+spec:
+  capacity:
+    storage: 50Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: /export/data
+---
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: minio-pv-volume-3
+  labels:
+    type: local
+spec:
+  capacity:
+    storage: 50Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: /export/data

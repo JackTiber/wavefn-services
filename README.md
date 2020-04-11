@@ -5,6 +5,9 @@ The services deployed to the wavefn.io Kubernetes cluster are meant to support o
 - [] Slack
 - [] Hangouts
 - [] Active Directory
+- [] GitHub
+- [] Docker Hub
 - [] APM
 - [] Logging
 - [] Monitoring
+
