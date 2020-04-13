@@ -1,55 +1,87 @@
-kind: PersistentVolume
 apiVersion: v1
+kind: PersistentVolume
 metadata:
-  name: minio-pv-volume-0
-  labels:
-    type: local
+  name: minio-pv-0
 spec:
   capacity:
     storage: 100Gi
   accessModes:
-    - ReadWriteOnce
-  hostPath:
-    path: /data/minio
+  - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: local-storage
+  local:
+    path: /var/minio
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - kube-worker-00
 ---
-kind: PersistentVolume
 apiVersion: v1
+kind: PersistentVolume
 metadata:
-  name: minio-pv-volume-1
-  labels:
-    type: local
+  name: minio-pv-1
 spec:
   capacity:
     storage: 100Gi
   accessModes:
-    - ReadWriteOnce
-  hostPath:
-    path: /data/minio
+  - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: local-storage
+  local:
+    path: /var/minio
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - kube-worker-01
 ---
-kind: PersistentVolume
 apiVersion: v1
+kind: PersistentVolume
 metadata:
-  name: minio-pv-volume-2
-  labels:
-    type: local
+  name: minio-pv-2
 spec:
   capacity:
     storage: 100Gi
   accessModes:
-    - ReadWriteOnce
-  hostPath:
-    path: /data/minio
+  - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: local-storage
+  local:
+    path: /var/minio
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - kube-worker-02
 ---
-kind: PersistentVolume
 apiVersion: v1
+kind: PersistentVolume
 metadata:
-  name: minio-pv-volume-3
-  labels:
-    type: local
+  name: minio-pv-3
 spec:
   capacity:
     storage: 100Gi
   accessModes:
-    - ReadWriteOnce
-  hostPath:
-    path: /data/minio
+  - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: local-storage
+  local:
+    path: /var/minio
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - kube-worker-03
