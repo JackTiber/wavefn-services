@@ -4,8 +4,8 @@ metadata:
   name: minio-creds-secret
 type: Opaque
 data:
-  accesskey: bWluaW8= # base 64 encoded "minio" (echo -n 'minio' | base64)
-  secretkey: bWluaW8xMjM= # based 64 encoded "minio123" (echo -n 'minio123' | base64)
+  accesskey: YWRtaW5pc3RyYXRvcg== # base 64 encoded "minio" (echo -n 'minio' | base64)
+  secretkey: d2F2ZWZuaW90aWJlcjIwMjA= # based 64 encoded "minio123" (echo -n 'minio123' | base64)
 ---
 apiVersion: miniocontroller.min.io/v1beta1
 kind: MinIOInstance
@@ -111,4 +111,4 @@ spec:
         - ReadWriteOnce
       resources:
         requests:
-          storage: 10Gi
+          storage: 20Gi
